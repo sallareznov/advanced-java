@@ -10,9 +10,11 @@ Chaque sujet est décrit dans son propre fichier.
 | Carrefour | [traffic.md](traffic.md) | 6 | Des voitures, des bus et des camions traversent un carrefour réglé par des feux. |
 | Donjon | [dungeon.md](dungeon.md) | 6 | Un héros dirigé au clavier ramasse une clé, combat des monstres et cherche la sortie. |
 | Serpent | [snake.md](snake.md) | 6 | Le jeu du serpent, avec quatre aliments qui ont chacun un effet différent. |
+| Poursuite | [chase.md](chase.md) | 6 | Une proie dirigée au clavier fuit des prédateurs qui calculent le chemin le plus rapide avec l'algorithme de Dijkstra. |
 
 Particules et Wa-Tor sont obligatoires. Pour le troisième projet, vous en choisissez **un seul**
-parmi Carrefour, Donjon et Serpent, ou vous proposez un sujet libre (voir ci-dessous).
+parmi Carrefour, Donjon, Serpent et Poursuite, ou vous proposez un sujet libre (voir ci-dessous).
+Poursuite est le plus difficile des quatre : il demande d'écrire l'algorithme de Dijkstra.
 
 ## Notation
 
@@ -20,10 +22,11 @@ Les projets sont notés sur **20 points** au total :
 
 - **Particules : 8 points** ;
 - **Wa-Tor : 6 points** ;
-- **Troisième projet : 6 points.** Vous avez le choix entre quatre possibilités :
+- **Troisième projet : 6 points.** Vous avez le choix entre cinq possibilités :
   - le projet **Carrefour** ;
   - le projet **Donjon** ;
   - le projet **Serpent** ;
+  - le projet **Poursuite** ;
   - un **sujet libre**, que vous proposez vous-même. Il doit être validé par l'enseignant
     avant que vous ne commenciez, et il respecte les règles communes ci-dessous.
 
