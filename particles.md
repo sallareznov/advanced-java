@@ -1,13 +1,15 @@
 # Projet : Particules
 
 Des particules colorées se déplacent en plein écran. Chacune part dans une direction
-choisie au hasard, rebondit sur les bords de l'écran, et change de direction quand elle
+choisie au hasard, rebondit sur les bords de l'écran (ou réapparaît du côté opposé, au
+choix), et change de direction quand elle
 en percute une autre.
 
 ![Démonstration de l'application](assets/particles/demo.gif)
 
 La vidéo complète, en meilleure qualité, est disponible ici : [demo.mp4](assets/particles/demo.mp4).
-Elle fait référence : votre application doit se comporter de la même façon.
+Elle fait référence : votre application doit se comporter de la même façon, sauf aux bords de
+l'écran si vous choisissez de faire réapparaître les particules du côté opposé.
 
 **Barème :** ce projet compte pour **8 points sur 20**.
 
@@ -32,7 +34,11 @@ l'organisation du travail vous reviennent.
 - Chaque particule est un disque de 8 pixels de rayon, d'une couleur tirée au hasard.
 - Chaque particule démarre à un endroit libre (elle ne touche aucune autre particule), dans une
   direction tirée au hasard, à 150 pixels par seconde.
-- Une particule rebondit sur les quatre bords de l'écran.
+- Quand une particule atteint un bord de l'écran, vous avez le choix entre deux comportements :
+  - elle **rebondit** sur le bord, comme dans la vidéo ;
+  - elle **réapparaît du côté opposé**, en gardant sa direction et sa vitesse.
+
+  Choisissez l'un des deux, appliquez-le aux quatre bords, et indiquez votre choix dans votre `README.md`.
 - Deux particules qui se touchent rebondissent l'une sur l'autre. Le choc est élastique et
   toutes les particules ont la même masse.
 - La touche Espace met en pause et relance. La touche Échap quitte l'application.
