@@ -3,17 +3,19 @@
 Ce dépôt contient les sujets des projets du cours de Java avancé.
 Chaque sujet est décrit dans son propre fichier.
 
-| Projet | Sujet | Points | En une phrase |
-|---|---|---|---|
-| Particules | [particles.md](particles.md) | 8 | Des particules colorées se déplacent en plein écran et rebondissent entre elles. |
-| Wa-Tor | [wator.md](wator.md) | 6 | Des thons et des requins vivent, se reproduisent et se mangent sur une planète recouverte d'eau. |
-| Carrefour | [traffic.md](traffic.md) | 6 | Des voitures, des bus et des camions traversent un carrefour réglé par des feux. |
-| Donjon | [dungeon.md](dungeon.md) | 6 | Un héros dirigé au clavier ramasse une clé, combat des monstres et cherche la sortie. |
-| Serpent | [snake.md](snake.md) | 6 | Le jeu du serpent, avec quatre aliments qui ont chacun un effet différent. |
-| Poursuite | [chase.md](chase.md) | 6 | Une proie dirigée au clavier fuit des prédateurs qui calculent le chemin le plus rapide avec l'algorithme de Dijkstra. |
+| | Projet | Sujet | Points | En une phrase |
+|---|---|---|---|---|
+| 🟦 Obligatoire | Particules | [particles.md](particles.md) | 8 | Des particules colorées se déplacent en plein écran et rebondissent entre elles. |
+| 🟦 Obligatoire | Wa-Tor | [wator.md](wator.md) | 6 | Des thons et des requins vivent, se reproduisent et se mangent sur une planète recouverte d'eau. |
+| 🟧 Au choix | Carrefour | [traffic.md](traffic.md) | 6 | Des voitures, des bus et des camions traversent un carrefour réglé par des feux. |
+| 🟧 Au choix | Donjon | [dungeon.md](dungeon.md) | 6 | Un héros dirigé au clavier ramasse une clé, combat des monstres et cherche la sortie. |
+| 🟧 Au choix | Serpent | [snake.md](snake.md) | 6 | Le jeu du serpent, avec quatre aliments qui ont chacun un effet différent. |
+| 🟧 Au choix | Poursuite | [chase.md](chase.md) | 6 | Une proie dirigée au clavier fuit des prédateurs qui calculent le chemin le plus rapide avec l'algorithme de Dijkstra. |
 
-Particules et Wa-Tor sont obligatoires. Pour le troisième projet, vous en choisissez **un seul**
-parmi Carrefour, Donjon, Serpent et Poursuite, ou vous proposez un sujet libre (voir ci-dessous).
+🟦 Particules et Wa-Tor sont **obligatoires**.
+
+🟧 Pour le troisième projet, vous en choisissez **un seul** parmi Carrefour, Donjon, Serpent et
+Poursuite, ou vous proposez un sujet libre (voir ci-dessous).
 Poursuite est le plus difficile des quatre : il demande d'écrire l'algorithme de Dijkstra.
 
 ## Notation
