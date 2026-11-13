@@ -3,9 +3,9 @@
 Un donjon vu du dessus. Le joueur dirige un héros au clavier, case par case : il ramasse une
 clé, ouvre une porte, combat des monstres et cherche la sortie.
 
-![Démonstration de l'application](assets/dungeon/demo.gif)
+![Démonstration de l'application](assets/dungeon_demo.gif)
 
-La vidéo complète est disponible ici : [demo.mp4](assets/dungeon/demo.mp4).
+La vidéo complète est disponible ici : [dungeon_demo.mp4](assets/dungeon_demo.mp4).
 Elle fait référence : votre application doit se comporter de la même façon.
 
 **Barème :** ce projet compte pour **6 points sur 20**.

@@ -4,9 +4,9 @@ Un carrefour vu du dessus : deux routes se croisent, des feux règlent la circul
 Des voitures, des bus et des camions arrivent des quatre côtés, font la queue au feu rouge,
 puis traversent quand le feu passe au vert.
 
-![Démonstration de l'application](assets/traffic/demo.gif)
+![Démonstration de l'application](assets/traffic_demo.gif)
 
-La vidéo complète est disponible ici : [demo.mp4](assets/traffic/demo.mp4).
+La vidéo complète est disponible ici : [traffic_demo.mp4](assets/traffic_demo.mp4).
 Elle fait référence : votre application doit se comporter de la même façon.
 
 **Barème :** ce projet compte pour **6 points sur 20**.

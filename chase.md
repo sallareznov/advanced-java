@@ -5,9 +5,9 @@ et doit manger toutes les baies. Les prédateurs la poursuivent en suivant toujo
 le plus rapide, calculé avec l'algorithme de Dijkstra. Le terrain compte : l'herbe se traverse
 vite, le sable lentement, la boue très lentement.
 
-![Démonstration de l'application](assets/chase/demo.gif)
+![Démonstration de l'application](assets/chase_demo.gif)
 
-La vidéo complète est disponible ici : [demo.mp4](assets/chase/demo.mp4).
+La vidéo complète est disponible ici : [chase_demo.mp4](assets/chase_demo.mp4).
 Elle fait référence : votre application doit se comporter de la même façon.
 
 **Barème :** ce projet compte pour **6 points sur 20**.

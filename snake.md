@@ -4,9 +4,9 @@ Le jeu du serpent, avec une différence : il existe quatre aliments, et chacun a
 différent. L'un fait grandir, un autre fait rétrécir, un autre accélère, le dernier inverse
 les touches.
 
-![Démonstration de l'application](assets/snake/demo.gif)
+![Démonstration de l'application](assets/snake_demo.gif)
 
-La vidéo complète est disponible ici : [demo.mp4](assets/snake/demo.mp4).
+La vidéo complète est disponible ici : [snake_demo.mp4](assets/snake_demo.mp4).
 Elle fait référence : votre application doit se comporter de la même façon.
 
 **Barème :** ce projet compte pour **6 points sur 20**.

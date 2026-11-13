@@ -6,9 +6,9 @@ aussi, et meurent de faim s'ils ne trouvent rien à manger. Aucune règle ne dit
 populations doivent osciller », et pourtant c'est ce qui se produit : trop de requins font
 disparaître les thons, puis les requins meurent de faim, puis les thons reviennent.
 
-![Démonstration de l'application](assets/wator/demo.gif)
+![Démonstration de l'application](assets/wator_demo.gif)
 
-La vidéo complète est disponible ici : [demo.mp4](assets/wator/demo.mp4).
+La vidéo complète est disponible ici : [wator_demo.mp4](assets/wator_demo.mp4).
 Elle fait référence : votre application doit se comporter de la même façon.
 
 **Barème :** ce projet compte pour **6 points sur 20**.

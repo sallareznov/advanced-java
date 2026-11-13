@@ -5,9 +5,9 @@ choisie au hasard, rebondit sur les bords de l'écran (ou réapparaît du côté
 choix), et change de direction quand elle
 en percute une autre.
 
-![Démonstration de l'application](assets/particles/demo.gif)
+![Démonstration de l'application](assets/particles_demo.gif)
 
-La vidéo complète, en meilleure qualité, est disponible ici : [demo.mp4](assets/particles/demo.mp4).
+La vidéo complète, en meilleure qualité, est disponible ici : [particles_demo.mp4](assets/particles_demo.mp4).
 Elle fait référence : votre application doit se comporter de la même façon, sauf aux bords de
 l'écran si vous choisissez de faire réapparaître les particules du côté opposé.
 
