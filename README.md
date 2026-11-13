@@ -7,7 +7,12 @@ Chaque sujet est décrit dans son propre fichier.
 |---|---|---|---|
 | Particules | [particles.md](particles.md) | 8 | Des particules colorées se déplacent en plein écran et rebondissent entre elles. |
 | Wa-Tor | [wator.md](wator.md) | 6 | Des thons et des requins vivent, se reproduisent et se mangent sur une planète recouverte d'eau. |
-| Troisième projet | à venir | 6 | Un sujet qui sera ajouté ici, ou un sujet de votre choix (voir ci-dessous). |
+| Carrefour | [traffic.md](traffic.md) | 6 | Des voitures, des bus et des camions traversent un carrefour réglé par des feux. |
+| Donjon | [dungeon.md](dungeon.md) | 6 | Un héros dirigé au clavier ramasse une clé, combat des monstres et cherche la sortie. |
+| Serpent | [snake.md](snake.md) | 6 | Le jeu du serpent, avec quatre aliments qui ont chacun un effet différent. |
+
+Particules et Wa-Tor sont obligatoires. Pour le troisième projet, vous en choisissez **un seul**
+parmi Carrefour, Donjon et Serpent, ou vous proposez un sujet libre (voir ci-dessous).
 
 ## Notation
 
@@ -15,8 +20,10 @@ Les projets sont notés sur **20 points** au total :
 
 - **Particules : 8 points** ;
 - **Wa-Tor : 6 points** ;
-- **Troisième projet : 6 points.** Vous avez le choix entre deux possibilités :
-  - le sujet qui sera ajouté plus tard dans ce dépôt ;
+- **Troisième projet : 6 points.** Vous avez le choix entre quatre possibilités :
+  - le projet **Carrefour** ;
+  - le projet **Donjon** ;
+  - le projet **Serpent** ;
   - un **sujet libre**, que vous proposez vous-même. Il doit être validé par l'enseignant
     avant que vous ne commenciez, et il respecte les règles communes ci-dessous.
 
