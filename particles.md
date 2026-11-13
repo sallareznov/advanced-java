@@ -48,14 +48,8 @@ Ces règles font partie du sujet. Elles seront vérifiées.
    C'est la vue qui connaît le modèle, jamais l'inverse.
 4. **Le modèle ne connaît pas la vue.** Aucune classe de `model` n'utilise une classe de `view`.
 5. **Tous les attributs sont privés.** Aucun attribut `public`, aucune variable `static` modifiable.
-6. **Les positions et les vitesses sont des vecteurs immuables.** Vous écrivez vous-même une
-   classe de vecteur à deux dimensions : ses attributs sont `final` et chaque opération
-   renvoie un nouveau vecteur. N'utilisez pas `Point2D` de JavaFX.
-7. **Une particule ne peut pas être modifiée par n'importe qui.** Les méthodes qui changent
-   sa position ou sa vitesse ne sont pas `public`. De même, la collection des particules ne
-   doit pas pouvoir être modifiée depuis l'extérieur de la classe qui la possède.
-8. **Pas de `instanceof`.**
-9. **La partie JavaFX reste petite** : environ 150 lignes au total dans `view`. Si elle
+6. **Pas de `instanceof`.**
+7. **La partie JavaFX reste petite** : environ 150 lignes au total dans `view`. Si elle
    grossit, c'est que de la logique s'est glissée dans la vue.
 
 ## Critères de validation
