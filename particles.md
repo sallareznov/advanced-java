@@ -7,6 +7,7 @@ en percute une autre.
 ![Aperçu de l'application](assets/particles/apercu.png)
 
 Une vidéo d'une exécution est disponible ici : [demo.mp4](assets/particles/demo.mp4).
+Elle fait référence : votre application doit se comporter de la même façon.
 
 ## Objectifs
 
@@ -15,11 +16,12 @@ Ce projet est un projet de **Java**, pas de JavaFX. À la fin, vous aurez pratiq
 - la conception de plusieurs classes qui collaborent ;
 - l'encapsulation (attributs privés, visibilité de paquetage, objets immuables) ;
 - les collections et les streams ;
-- les interfaces, les lambdas et le patron Observateur ;
+- les interfaces et les lambdas ;
 - la séparation entre le **modèle** (la logique) et la **vue** (l'affichage).
 
 Vous partez de zéro. Le sujet décrit ce que l'application doit faire et les règles à
-respecter. Il ne donne pas la liste des classes : c'est à vous de la trouver.
+respecter. Il ne donne ni la liste des classes ni les étapes à suivre : la conception et
+l'organisation du travail vous reviennent.
 
 ## Ce que fait l'application
 
@@ -31,8 +33,6 @@ respecter. Il ne donne pas la liste des classes : c'est à vous de la trouver.
 - Une particule rebondit sur les quatre bords de l'écran.
 - Deux particules qui se touchent rebondissent l'une sur l'autre. La formule est donnée en
   [annexe B](#annexe-b--le-rebond-entre-deux-particules).
-- Une particule devient blanche un court instant quand elle vient de percuter une autre
-  particule, puis reprend sa couleur en un tiers de seconde.
 - La touche Espace met en pause et relance. La touche Échap quitte l'application.
 
 ## Règles à respecter
@@ -46,8 +46,7 @@ Ces règles font partie du sujet. Elles seront vérifiées.
 3. **Une particule n'est pas un cercle JavaFX.** La classe qui représente une particule
    n'hérite pas de `Circle`, ne contient pas de `Circle` et ne sait pas se dessiner.
    C'est la vue qui connaît le modèle, jamais l'inverse.
-4. **Le modèle ne connaît pas la vue.** Pourtant, la vue doit apprendre qu'une collision
-   vient d'avoir lieu pour faire clignoter les particules. Utilisez le patron **Observateur**.
+4. **Le modèle ne connaît pas la vue.** Aucune classe de `model` n'utilise une classe de `view`.
 5. **Tous les attributs sont privés.** Aucun attribut `public`, aucune variable `static` modifiable.
 6. **Les positions et les vitesses sont des vecteurs immuables.** Vous écrivez vous-même une
    classe de vecteur à deux dimensions : ses attributs sont `final` et chaque opération
@@ -59,110 +58,21 @@ Ces règles font partie du sujet. Elles seront vérifiées.
 9. **La partie JavaFX reste petite** : environ 150 lignes au total dans `view`. Si elle
    grossit, c'est que de la logique s'est glissée dans la vue.
 10. **Un programme console.** En plus de l'application, vous fournissez un second `main` qui
-    fait tourner la simulation sans ouvrir de fenêtre (voir le jalon 2).
+    fait tourner la simulation sans ouvrir de fenêtre : il crée 100 particules, fait 1 000 pas
+    de 1/60 de seconde, et affiche avant et après le nombre de particules, la vitesse moyenne
+    et la somme des carrés des vitesses, calculées avec des **streams**.
 
-## Deux indications de conception
+## Critères de validation
 
-### La direction est dans la vitesse
+Votre travail est correct si :
 
-Une particule n'a pas besoin d'un attribut « direction ». Sa vitesse est un vecteur : la
-direction dans laquelle il pointe est la direction de la particule, et sa longueur est sa
-vitesse en pixels par seconde. Pour obtenir une vitesse dans une direction au hasard :
-
-```java
-double angle = random.nextDouble() * 2 * Math.PI;
-double vx = Math.cos(angle) * speed;
-double vy = Math.sin(angle) * speed;
-```
-
-Changer de direction revient donc à remplacer le vecteur vitesse.
-
-### La couleur est dans le modèle, sans JavaFX
-
-La particule possède sa couleur, mais le modèle n'a pas le droit d'importer
-`javafx.scene.paint.Color`. Stockez la couleur sous la forme d'une **teinte** : un nombre
-entre 0 et 360, sa position sur le cercle chromatique. C'est la vue qui transforme cette
-teinte en couleur JavaFX.
-
-## Jalons
-
-Avancez dans cet ordre. Chaque jalon se termine par un **point de contrôle** : ne passez
-pas au suivant tant qu'il n'est pas validé.
-
-Les jalons 1 et 2 sont du Java pur. Vous n'ouvrez aucune fenêtre avant le jalon 3.
-
-### Jalon 0 : le projet
-
-Créez un projet Maven avec le `pom.xml` donné en [annexe A](#annexe-a--pomxml).
-
-**Point de contrôle :** `mvn compile` se termine sans erreur.
-
-### Jalon 1 : un modèle qui bouge
-
-Écrivez le modèle : des particules dans un rectangle, qui avancent en ligne droite et
-rebondissent sur les bords. Une seule méthode fait avancer toute la simulation d'un pas
-de temps `dt`, exprimé en secondes.
-
-**Points de contrôle**, à vérifier dans un `main` provisoire :
-
-- un vecteur (3, 4) a une longueur de 5, et additionner deux vecteurs ne modifie aucun des deux ;
-- une particule placée en (10, 10) avec une vitesse (−100, 0), dans un rectangle de 400 × 300,
-  repart vers la droite après quelques pas ;
-- après 1 000 pas de 1/60 de seconde, toutes les particules sont encore dans le rectangle et
-  leur nombre n'a pas changé.
-
-### Jalon 2 : les collisions, vérifiées en console
-
-Ajoutez les collisions entre particules, puis le mécanisme d'observation : n'importe quel
-objet doit pouvoir demander à être prévenu à chaque collision.
-
-Écrivez ensuite le programme console. Il doit :
-
-- créer une simulation de 100 particules ;
-- s'abonner aux collisions avec une **lambda** pour les compter ;
-- faire 1 000 pas de simulation ;
-- afficher, avant et après, le nombre de particules, la vitesse moyenne et la somme des
-  carrés des vitesses, calculées avec des **streams**.
-
-**Points de contrôle :**
-
-- deux particules lancées l'une vers l'autre sur la même ligne, avec les vitesses (100, 0)
-  et (−40, 0), repartent avec les vitesses échangées : (−40, 0) et (100, 0) ;
+- l'application se comporte comme décrit plus haut ;
+- après 1 000 pas, toutes les particules sont encore dans l'écran et leur nombre n'a pas changé ;
+- deux particules lancées l'une vers l'autre sur la même ligne, avec les vitesses (100, 0) et
+  (−40, 0), repartent avec les vitesses échangées : (−40, 0) et (100, 0) ;
 - dans le programme console, le nombre de particules et la somme des carrés des vitesses sont
-  identiques avant et après, et le nombre de collisions est de plusieurs centaines.
-  Si la somme des carrés change, votre rebond est faux.
-
-Exemple de sortie (les valeurs exactes varient d'une exécution à l'autre) :
-
-```
-Before: 100 particles, average speed 150.0 px/s, energy 2250000
-After 1000 steps: 100 particles, average speed 136.8 px/s, energy 2250000
-Collisions: 557
-```
-
-### Jalon 3 : l'affichage
-
-C'est seulement maintenant que JavaFX entre en jeu. Les appels utiles sont listés en
-[annexe C](#annexe-c--aide-mémoire-javafx).
-
-Affichez un cercle par particule, en plein écran, et animez le tout : à chaque image, le
-modèle avance d'un pas, puis la vue recopie l'état du modèle vers les cercles. Ajoutez la
-pause (Espace) et la sortie (Échap).
-
-Réfléchissez à l'endroit où se fait le lien entre une particule (Java) et son cercle
-(JavaFX). Ce lien doit exister à un seul endroit de votre code.
-
-**Point de contrôle :** l'application ressemble à la vidéo, sans le clignotement. Le programme
-console fonctionne toujours, et `model` ne contient toujours aucun `import javafx`.
-
-### Jalon 4 : l'éclair blanc
-
-Faites clignoter en blanc les particules qui viennent de se percuter.
-
-Si votre mécanisme d'observation est bien conçu, vous n'avez **rien à changer dans le
-modèle** : la vue s'abonne, comme le programme console l'a fait avant elle.
-
-**Point de contrôle :** les particules clignotent, et vous n'avez modifié aucun fichier de `model`.
+  identiques avant et après. Si la somme des carrés change, votre rebond est faux ;
+- toutes les règles ci-dessus sont respectées.
 
 ## Ce que vous rendez
 
@@ -268,8 +178,7 @@ de vitesses `vA` et `vB`, et de rayon `R`.
 
    `vB ← vB + s × n`
 
-   Si `s ≤ 0`, elles s'éloignent déjà : on ne touche pas aux vitesses. C'est dans le cas
-   `s > 0` qu'il y a réellement une collision à signaler aux observateurs.
+   Si `s ≤ 0`, elles s'éloignent déjà : on ne touche pas aux vitesses.
 
 4. **Séparer les particules.** Elles se chevauchent de `2R − d`. On recule chacune de la
    moitié de ce chevauchement, pour qu'elles ne restent pas collées :
@@ -296,7 +205,6 @@ Vous n'avez besoin de rien d'autre que ce qui suit.
 | Déplacer une forme | `node.setTranslateX(x)` et `node.setTranslateY(y)` |
 | Couleur à partir d'une teinte | `Color.hsb(hue, 0.75, 1.0)` |
 | Colorer un disque | `circle.setFill(color)` |
-| Mélanger deux couleurs | `color.interpolate(Color.WHITE, t)` avec `t` entre 0 et 1 |
 | Afficher la fenêtre | `stage.setScene(new Scene(pane))` puis `stage.show()` |
 | Plein écran | `stage.setFullScreen(true)`, et `stage.setFullScreenExitHint("")` pour masquer le message |
 | Clavier | `scene.setOnKeyPressed(event -> ...)` et `event.getCode() == KeyCode.SPACE` |
