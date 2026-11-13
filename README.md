@@ -6,6 +6,7 @@ Chaque sujet est décrit dans son propre fichier.
 | Projet | Sujet | En une phrase |
 |---|---|---|
 | Particules | [particles.md](particles.md) | Des particules colorées se déplacent en plein écran et rebondissent entre elles. |
+| Wa-Tor | [wator.md](wator.md) | Des thons et des requins vivent, se reproduisent et se mangent sur une planète recouverte d'eau. |
 
 D'autres sujets seront ajoutés ici.
 
