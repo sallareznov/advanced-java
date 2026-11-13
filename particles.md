@@ -4,9 +4,9 @@ Des particules colorées se déplacent en plein écran. Chacune part dans une di
 choisie au hasard, rebondit sur les bords de l'écran, et change de direction quand elle
 en percute une autre.
 
-![Aperçu de l'application](assets/particles/apercu.png)
+![Démonstration de l'application](assets/particles/demo.gif)
 
-Une vidéo d'une exécution est disponible ici : [demo.mp4](assets/particles/demo.mp4).
+La vidéo complète, en meilleure qualité, est disponible ici : [demo.mp4](assets/particles/demo.mp4).
 Elle fait référence : votre application doit se comporter de la même façon.
 
 ## Objectifs
