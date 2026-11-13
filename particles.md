@@ -57,10 +57,6 @@ Ces règles font partie du sujet. Elles seront vérifiées.
 8. **Pas de `instanceof`.**
 9. **La partie JavaFX reste petite** : environ 150 lignes au total dans `view`. Si elle
    grossit, c'est que de la logique s'est glissée dans la vue.
-10. **Un programme console.** En plus de l'application, vous fournissez un second `main` qui
-    fait tourner la simulation sans ouvrir de fenêtre : il crée 100 particules, fait 1 000 pas
-    de 1/60 de seconde, et affiche avant et après le nombre de particules, la vitesse moyenne
-    et la somme des carrés des vitesses, calculées avec des **streams**.
 
 ## Critères de validation
 
@@ -70,14 +66,13 @@ Votre travail est correct si :
 - après 1 000 pas, toutes les particules sont encore dans l'écran et leur nombre n'a pas changé ;
 - deux particules lancées l'une vers l'autre sur la même ligne, avec les vitesses (100, 0) et
   (−40, 0), repartent avec les vitesses échangées : (−40, 0) et (100, 0) ;
-- dans le programme console, le nombre de particules et la somme des carrés des vitesses sont
-  identiques avant et après. Si la somme des carrés change, votre rebond est faux ;
+- la somme des carrés des vitesses de toutes les particules ne change pas au cours du temps.
+  Si elle change, votre rebond est faux ;
 - toutes les règles ci-dessus sont respectées.
 
 ## Ce que vous rendez
 
 - Le projet Maven complet, qui se lance avec `mvn javafx:run`.
-- Le programme console.
 - Un court fichier `README.md` qui liste vos classes, avec une phrase par classe pour
   expliquer son rôle, et qui justifie vos choix de conception.
 
