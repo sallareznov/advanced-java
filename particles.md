@@ -14,7 +14,7 @@ Elle fait référence : votre application doit se comporter de la même façon.
 Ce projet est un projet de **Java**, pas de JavaFX. À la fin, vous aurez pratiqué :
 
 - la conception de plusieurs classes qui collaborent ;
-- l'encapsulation (attributs privés, visibilité de paquetage, objets immuables) ;
+- l'encapsulation ;
 - les collections et les streams ;
 - les interfaces et les lambdas ;
 - la séparation entre le **modèle** (la logique) et la **vue** (l'affichage).
