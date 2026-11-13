@@ -11,6 +11,8 @@ disparaître les thons, puis les requins meurent de faim, puis les thons revienn
 La vidéo complète est disponible ici : [demo.mp4](assets/wator/demo.mp4).
 Elle fait référence : votre application doit se comporter de la même façon.
 
+**Barème :** ce projet compte pour **6 points sur 20**.
+
 ## Objectifs
 
 Ce projet est un projet de **Java**, pas de JavaFX. À la fin, vous aurez pratiqué :

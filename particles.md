@@ -9,6 +9,8 @@ en percute une autre.
 La vidéo complète, en meilleure qualité, est disponible ici : [demo.mp4](assets/particles/demo.mp4).
 Elle fait référence : votre application doit se comporter de la même façon.
 
+**Barème :** ce projet compte pour **8 points sur 20**.
+
 ## Objectifs
 
 Ce projet est un projet de **Java**, pas de JavaFX. À la fin, vous aurez pratiqué :

@@ -3,12 +3,23 @@
 Ce dépôt contient les sujets des projets du cours de Java avancé.
 Chaque sujet est décrit dans son propre fichier.
 
-| Projet | Sujet | En une phrase |
-|---|---|---|
-| Particules | [particles.md](particles.md) | Des particules colorées se déplacent en plein écran et rebondissent entre elles. |
-| Wa-Tor | [wator.md](wator.md) | Des thons et des requins vivent, se reproduisent et se mangent sur une planète recouverte d'eau. |
+| Projet | Sujet | Points | En une phrase |
+|---|---|---|---|
+| Particules | [particles.md](particles.md) | 8 | Des particules colorées se déplacent en plein écran et rebondissent entre elles. |
+| Wa-Tor | [wator.md](wator.md) | 6 | Des thons et des requins vivent, se reproduisent et se mangent sur une planète recouverte d'eau. |
 
-D'autres sujets seront ajoutés ici.
+| Troisième projet | à venir | 6 | Un sujet qui sera ajouté ici, ou un sujet de votre choix (voir ci-dessous). |
+
+## Notation
+
+Les projets sont notés sur **20 points** au total :
+
+- **Particules : 8 points** ;
+- **Wa-Tor : 6 points** ;
+- **Troisième projet : 6 points.** Vous avez le choix entre deux possibilités :
+  - le sujet qui sera ajouté plus tard dans ce dépôt ;
+  - un **sujet libre**, que vous proposez vous-même. Il doit être validé par l'enseignant
+    avant que vous ne commenciez, et il respecte les règles communes ci-dessous.
 
 ## Règles communes à tous les projets
 
